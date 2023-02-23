@@ -20,21 +20,21 @@ buttonStart.addEventListener('click', () =>{
         segundos--
         
         if(segundos == 0){
-          alert('Tempo acabou!')
+          alert('Tempo acabou! Jogue de novo.')
           clearInterval(cron)
-          buttonStart.value = 'Jogar denovo'
+          buttonStart.value = 'Jogar de novo'
         }else if(tentativas == 0){
-          alert('tentativas acabaram')
+          alert('tentativas acabaram! Jogue de novo.')
           trys.innerHTML = `Tentativas: ${tentativas}`
           clearInterval(cron)
-          buttonStart.value = 'Jogar denovo' 
+          buttonStart.value = 'Jogar de novo' 
         }
         
       }
       
       Timer.innerHTML = `Tempo: ${segundos}`
     },1000)
-  }else if(buttonStart.value == 'Jogar denovo'){
+  }else if(buttonStart.value == 'Jogar de novo'){
     jogardenovo()
   }
 })
@@ -44,9 +44,9 @@ buttonTry.addEventListener('click', () =>{
   if(controller == 1){
     
     if(numero == writeInput.value && (segundos > 0 && tentativas > 0)){
-      alert(`Você acertou o número ${numero}, jogue denovo!`)
+      alert(`Você acertou o número ${numero}, jogue de novo!`)
       clearInterval(cron)
-      buttonStart.value = 'Jogar denovo'
+      buttonStart.value = 'Jogar de novo'
     }else if(writeInput.value > numero && (segundos > 0 && tentativas > 0)){
       alert('numero é menor')
       writeInput.value = ''
@@ -54,9 +54,9 @@ buttonTry.addEventListener('click', () =>{
       alert('numero é maior')
       writeInput.value = ''
     }else if(tentativas == 0){
-      alert('suas tentativas acabaram! Jogue denovo.')
+      alert('suas tentativas acabaram! Jogue de novo.')
     }else if(segundos == 0){
-      alert('O tempo acabou! Jogue denovo.')
+      alert('O tempo acabou! Jogue de novo.')
     }
  
     if(tentativas > 0 && (writeInput != numero && segundos > 0)){
