@@ -14,11 +14,9 @@ if(typeof(Storage) != 'undefined'){
       containerConfig.style.display = 'flex'
 
       if(localStorage.cookies){
-    containCookie.innerText = 'sim'
+        containCookie.innerText = 'sim'
       }
       containVisits.innerText = localStorage.visits
-      
-
     }
   
 // ATIVA OS COOKIES
@@ -29,18 +27,15 @@ if(typeof(Storage) != 'undefined'){
     localStorage.cookies = true
     localStorage.visits = 1
     
-  containCookie.innerText = 'sim'
+    containCookie.innerText = 'sim'
     containVisits.innerText = localStorage.visits
-    
-
   })
 
 // DESATIVA OS COOKIES
   btnNoCookie.addEventListener('click', ()=> {
     containerCookie.style.display = 'flex'
     containerConfig.style.display = 'none'
-    localStorage.removeItem('cookies')
-    localStorage.removeItem('visits')
+    localStorage.clear()
     alert('Configurações resetadas')
   })
 
