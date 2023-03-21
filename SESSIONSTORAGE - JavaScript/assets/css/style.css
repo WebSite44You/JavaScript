@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: #2B2B2C;
+  display: flex;
+}
+
+label{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 300px;
+}
+label > p{
+  font-size: 11px;
+  color: #868686;
+}
+
+#campo{
+  width: 100%;
+  height: 35px;
+  background-color: #353537;
+  border: 1px solid #4B4B4B;
+  padding: 0 5px;
+  color: white;
+  border-radius: 3px;
+  outline: none;
+}
+#campo::placeholder{
+  color: #A0A0A0;
+}
