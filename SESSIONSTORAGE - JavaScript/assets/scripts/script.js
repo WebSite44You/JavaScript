@@ -6,7 +6,6 @@ if(typeof(Storage) != 'undefined'){
     campoInput.value = sessionStorage.getItem('save')
   }
 
-
   campoInput.addEventListener('input', ()=> {
     if(campoInput.value == ''){
       sessionStorage.clear()
